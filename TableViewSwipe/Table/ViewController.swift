@@ -5,7 +5,7 @@
 import UIKit
 
 /// This ViewController acts as a dummy VIEW. It doesn't handle any logic,
-/// which will be performed by TableController, what we consider the CONTROLLER
+/// which will be performed by TableController, considered the CONTROLLER
 /// of this MVC approach.
 
 class ViewController: UIViewController {
@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableController()
+    }
+    
+    private func configureTableController() {
         tableController = TableController()
         tableController?.delegate = self
         tableView.dataSource = tableController
